@@ -2,6 +2,14 @@
 
 Deploy a single BYOL FortiGate in IBM Cloud using the Schematics service.
 
+## Requirements
+
+-   [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) 0.13+
+-   One FortiOS 7.0 BYOL Licenses.
+-   [A VPC with two subnets in a single zone](https://cloud.ibm.com/docs/vpc/vpc-getting-started-with-ibm-cloud-virtual-private-cloud-infrastructure)
+-   [A configured IBM SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys)
+-   [A security group](https://cloud.ibm.com/docs/security-groups?topic=security-groups-about-ibm-security-groups)
+
 ## Deployment overview
 
 > **Note:** For a local deployment a Gen 2 API key will be needed. For details see: [IBM Gen 2 API key](https://cloud.ibm.com/docs/terraform?topic=terraform-provider-reference)
