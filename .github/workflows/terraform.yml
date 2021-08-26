@@ -29,7 +29,7 @@ jobs:
 
     # Generates an execution plan for Terraform
       - name: Terraform Plan
-        run: terraform plan -var ssh_public_key='fshuva-pub' -var vpc='fshuva-qa-test-vpc' -var subnet1='0717-2e15ec1e-6d5d-48cb-a6c2-787f3586910c' -var subnet2='0717-7f63990a-6c23-4278-a048-b79479227425' -var security_group='evade-subzero-cola-goes' -var cluster_name='fortigate-tf-actions-cli' -var ibmcloud_api_key='${{secrets.IBMCLOUD_API_KEY}}'
+        run: terraform plan -var ssh_public_key='fortigate-terraform-sshkey-fshuva' -var vpc='fshuva-qa-test-vpc' -var subnet1='0717-2e15ec1e-6d5d-48cb-a6c2-787f3586910c' -var subnet2='0717-7f63990a-6c23-4278-a048-b79479227425' -var security_group='evade-subzero-cola-goes' -var cluster_name='fortigate-tf-actions-cli' -var ibmcloud_api_key='${{secrets.IBMCLOUD_API_KEY}}'
 
     #   On push to main, build or change infrastructure according to Terraform configuration files
     #   Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
