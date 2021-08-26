@@ -19,10 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install terraform
-        run:
-        curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
-        apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-        apt install terraform=0.13.7
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+          apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          apt install terraform=0.13.7
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
         run: terraform init
