@@ -7,27 +7,19 @@ on:
   pull_request:
 
 jobs:
-  terraform-plan:
-    name: 'Terraform-Plan'
+  terraform:
+    name: 'Terraform'
     runs-on: ubuntu-latest
-    env:
-      terraform:
-        #Install terraform
-        sudo apt install terraform=0.13.7
-
-  #  environment: production
-
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
-
     steps:
     # Checkout the repository to the GitHub Actions runner
       - name: Checkout
         uses: actions/checkout@v2
-    # Use Terraform
-      - name: terraform
+      - name: Install terraform
+        run: sudo apt install terraform=0.13.7
 
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
