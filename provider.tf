@@ -6,13 +6,6 @@ terraform {
       version = "~> 1.20.0"
     }
   }
-
-  backend "remote" {
-    organization = "fortinet-ffcdevops"
-      workspaces {
-        name = "gh-actions-test"
-      }
-   }
 }
 
 # Configure the IBM Provider
